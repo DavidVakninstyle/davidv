@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>עוד עבודות | David V</title>
+  <link rel="stylesheet" href="index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/davidlogo.png" alt="David V Logo">
+      </a>
+    </div>
+    <nav>
+      <a href="index.html">בית</a>
+      <a href="index.html#about">אודות</a>
+      <a href="index.html#works">עבודות</a>
+      <a href="index.html#recommendations">המלצות</a>
+      <a href="index.html#contact">צור קשר</a>
+    </nav>
+  </header>
+
+  <section id="works">
+    <h2>כל העבודות שלי</h2>
+    <div class="gallery">
+      <!-- עבודות לדוגמה - החלף בתמונות שלך -->
+      <!-- חזור על המבנה הבא 30 פעמים -->
+      <div class="work-box">
+        <img src="project/joker.jpg" alt="פרסומת לסרט הגוקר">
+        <p> פרסומת לסרט הגוקר</p>
+      </div>
+      <div class="work-box">
+        <img src="project/דגל מעוצב לבר מצווה.png" alt="דגל מעוצב לבר מצווה">
+        <p>דגל מעוצב לבר מצווה</p>
+      </div>
+      <div class="work-box">
+        <img src="project/לוח שנה 20257.jpg" alt="לוח שנה חודשי">
+        <p>לוח שנה חודשי/p>
+      </div>
+
+<div class="work-box">
+        <img src="project/iPhone SE - 1.png" alt=" דף התחברות ">
+        <p> דף התחברות </p>
+      </div>
+
+
+      <div class="work-box">
+        <img src="project/iPhone SE - 2.png" alt="דף התחברות">
+        <p>דף התחברות  </p>
+      </div>
+
+      <div class="work-box">
+        <img src="project/עיצוב כרטיס ביקור.png" alt="כרטיס ביקור ללקוח">
+        <p>כרטיס ביקור ללקוח</p>
+      </div>
+      <div class="work-box">
+        <img src="project/עימוד כתבה לעיתון.jpg" alt="עימוד כתבה לעיתון">
+        <p>עימוד כתבה לעיתון </p>
+      </div>
+       <div class="work-box">
+        <img src="project/עיצוב הזמנה לאירוע.jpg" alt="הזמנה לאירוע">
+        <p>הזמנה לאירוע</p>
+      </div>
+
+        <div class="work-box">
+        <img src="project/עיצוב פוסטר לאירוע.jpg" alt="עיצוב פוסטר לאירוע">
+        <p> עיצוב פוסטר לאירוע</p>
+      </div>
+
+        <div class="work-box">
+        <img src="project/יצירת עמוד מתכון.png" alt="עימוד למתכון ">
+        <p>עימוד למתכון</p>
+      </div>
+
+        <div class="work-box">
+        <img src="project/AquaZen.jpg" alt="פוסטר למים טבעיים">
+        <p>פוסטר למים טבעיים</p>
+      </div>
+
+
+        <div class="work-box">
+        <img src="project/עיצוב כרטיס ברכה.jpg" alt="כרטיס ברכה לשבועות ">
+        <p>כרטיס ברכה לשבועות</p>
+      </div>
+      
+
+        
+
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 דוד וקנין. כל הזכויות שמורות.
+  </footer>
+
+  <script>
+    // גלילה חלקה כמו בעמוד הראשי
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e){
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href'))?.scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>

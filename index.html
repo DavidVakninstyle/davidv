@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>David V Portfolio</title>
+  <link rel="stylesheet" href="index.css">
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/davidlogo.png" alt="David V Logo">
+    </div>
+    <nav>
+      <a href="#">בית</a>
+      <a href="#about">אודות</a>
+      <a href="#works">עבודות</a>
+      <a href="#recommendations">המלצות</a>
+      <a href="#contact">צור קשר</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-logo-large">
+      <img src="images/davidlogo.png" alt="David V Logo">
+    </div>
+    <h1>דוד וקנין | מעצב גרפי</h1>
+    <h2>מתמחה בעיצוב לוגואים, מיתוג ודיגיטל</h2>
+    <p>
+      ברוך הבא לפורטפוליו שלי! כאן תוכל להתרשם מעבודות עיצוב מקצועיות ומגוונות, לקרוא חוות דעת מלקוחות מרוצים וליצור איתי קשר ישיר.
+      אני עובד מתוך תשוקה, דיוק, ירידה לפרטים הקטנים – ומחויבות אמיתית לעיצוב שמרגש.
+    </p>
+
+    <div class="softwere">
+      <div class="softwere-line">
+        <img src="images/softweteuse.png" alt="התוכנות שלי" class="softwerepic">
+        <p class="softwere-text">
+          כל העבודות מתבצעות בעזרת התוכנות המתקדמות והאהובות עליי: Illustrator, Photoshop, InDesign, Figma ועוד.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>קצת עליי</h2>
+    <p>
+      אני דוד, מעצב גרפי מבאר שבע. למדתי ב־IPC והתמחיתי ביצירת שפה גרפית ויזואלית לעסקים, עם סגנון מודרני ונקי.
+      אני מאמין שעיצוב טוב הוא כזה שמספר סיפור, מרגש, ומותאם בדיוק למטרה.
+      אני שואף להתפתח בכל יום מחדש, לשלב בין טכנולוגיה ליצירה – ולבנות מותגים בלתי נשכחים.
+    </p>
+  </section>
+
+  <section id="works">
+    <h2>עבודות שיצרו רושם</h2>
+    <div class="gallery">
+      <div class="work-box">
+        <img src="project/joker.jpg" alt="פרסומת לסרט הגוקר;">
+        <p>פרסומת לסרט הגוקר</p>
+      </div>
+      <div class="work-box">
+        <img src="project/דגל מעוצב לבר מצווה.png" alt="דגל מעוצב לבר מצווה">
+        <p>דגל מעוצב לבר מצווה</p>
+      </div>
+      <div class="work-box">
+        <img src="project/לוח שנה 20257.jpg" alt="יומן חודשי">
+        <p>יומן חודשי </p>
+      </div>
+      <div class="work-box">
+        <img src="project/עיצוב כרטיס ביקור.png" alt="כרטיס ביקור ללקוח ">
+        <p>כרטיס ביקור ללקוח</p>
+      </div>
+    </div>
+    <div class="read-more">
+      <a href="works.html">ראו עוד עבודות</a>
+    </div>
+  </section>
+
+  <section class="recommendations" id="recommendations">
+    <h2>המלצות מלקוחות</h2>
+    
+  <div class="testimonial">
+  <img src="images/reco-ron.png" alt="רון בנאי">
+  <div class="testimonial-bubble">
+    <h3>רון בנאי</h3>
+    <p>"בדיוק קיבלתי 
+תודה אחי איזה מושלםם לא חשבתי שזה יצא ככה זה בדיוק איך שתיכננתי שזה יראה מקצוען לגמרי תודה רבה"</p>
+  </div>
+</div>
+
+<div class="testimonial">
+  <img src="images/almog-reco.png" alt="אלמוג דרורי ">
+  <div class="testimonial-bubble">
+    <h3>אלמוג דרורי</h3>
+    <p>"דוד אתה תותח! בדיוק מה שחיפשתי – שילוב של עיצוב חד, שירות אדיב והבנה עמוקה של מה שרציתי. לא האמנתי שהתוצאה תצא ככה... פשוט וואו. תודה אחי!"!"</p>
+  </div>
+</div>
+
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>נשמע מעניין?</h2>
+    <p>אפשר לשלוח לי הודעה מיידית בוואטסאפ – ונחשוב יחד על עיצוב מנצח עבורך.</p>
+    <a href="https://wa.me/972523196885" class="whatsapp-button" target="_blank">שלחו לי וואטסאפ</a>
+  </section>
+
+  <footer>
+    &copy; 2025 דוד וקנין. כל הזכויות שמורות.
+  </footer>
+
+  <script>
+// ===== גלילה חלקה לעוגנים =====
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e){
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href'))?.scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+// ===== אפקט חשיפה בגלילה =====
+const revealElements = document.querySelectorAll('section, .work-box, .testimonial');
+const revealOnScroll = () => {
+  const triggerBottom = window.innerHeight * 0.9;
+  revealElements.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < triggerBottom) {
+      el.classList.add('reveal');
+    }
+  });
+};
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+
+// ===== אנימציית הקלדה בכותרת =====
+const h2 = document.querySelector('.hero h2');
+if (h2) {
+  const fullText = h2.textContent;
+  h2.textContent = '';
+  let i = 0;
+  const type = () => {
+    if (i < fullText.length) {
+      h2.textContent += fullText[i++];
+      setTimeout(type, 80);
+    }
+  };
+  type();
+}
+
+// ===== אנימציית RGB על כפתור וואטסאפ =====
+const wpButton = document.querySelector('.whatsapp-button');
+if (wpButton) {
+  let hue = 0;
+  setInterval(() => {
+    hue = (hue + 1) % 360;
+    wpButton.style.boxShadow = `0 0 18px hsl(${hue}, 100%, 60%)`;
+  }, 40);
+}
+
+// ===== קונסולה עם הודעת ברוך הבא משוגעת =====
+console.log("%cברוך הבא למוח של דוד וקנין!", "color: #25D366; font-size: 20px; font-weight: bold; background: #f0f0f0; padding: 8px;");
+</script>
+
+
+  
+</body>
+</html>

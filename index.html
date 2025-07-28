@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>David V Portfolio</title>
   <link rel="stylesheet" href="index.css">
- 
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -32,14 +31,18 @@
       ברוך הבא לפורטפוליו שלי! כאן תוכל להתרשם מעבודות עיצוב מקצועיות ומגוונות, לקרוא חוות דעת מלקוחות מרוצים וליצור איתי קשר ישיר.
       אני עובד מתוך תשוקה, דיוק, ירידה לפרטים הקטנים – ומחויבות אמיתית לעיצוב שמרגש.
     </p>
+  </section>
 
-    <div class="softwere">
-      <div class="softwere-line">
-        <img src="images/softweteuse.png" alt="התוכנות שלי" class="softwerepic">
-        <p class="softwere-text">
-          כל העבודות מתבצעות בעזרת התוכנות המתקדמות והאהובות עליי: Illustrator, Photoshop, InDesign, Figma ועוד.
-        </p>
-      </div>
+  <section class="software-sale-section">
+    <div class="software-sale-box">
+      <h2 style="font-size: 2rem; color: #0077ff; margin-bottom: 1rem;">
+        עיצוב מקצועי ב-100 ש"ח בלבד – עם כל התוכנות המתקדמות!
+      </h2>
+      <img src="images/sale.jpg" alt="כל העיצובים ב-100 ש"ח" style="width: 100%; max-width: 900px; border-radius: 16px; box-shadow: 0 0 20px rgba(0,0,0,0.12); margin-bottom: 20px;">
+      <img src="images/softweteuse.png" alt="תוכנות עבודה" style="display: block; margin: 0 auto 12px auto; max-width: 320px;">
+      <p style="font-size: 1.1rem; color: #222; line-height: 1.7; max-width: 700px; margin: 0 auto;">
+        כל העבודות מבוצעות בעזרת התוכנות המתקדמות והאהובות עליי: Illustrator, Photoshop, InDesign, Figma ועוד.
+      </p>
     </div>
   </section>
 
@@ -79,24 +82,21 @@
 
   <section class="recommendations" id="recommendations">
     <h2>המלצות מלקוחות</h2>
-    
-  <div class="testimonial">
-  <img src="images/reco-ron.png" alt="רון בנאי">
-  <div class="testimonial-bubble">
-    <h3>רון בנאי</h3>
-    <p>"בדיוק קיבלתי 
-תודה אחי איזה מושלםם לא חשבתי שזה יצא ככה זה בדיוק איך שתיכננתי שזה יראה מקצוען לגמרי תודה רבה"</p>
-  </div>
-</div>
+    <div class="testimonial">
+      <img src="images/reco-ron.png" alt="רון בנאי">
+      <div class="testimonial-bubble">
+        <h3>רון בנאי</h3>
+        <p>"בדיוק קיבלתי תודה אחי איזה מושלםם לא חשבתי שזה יצא ככה זה בדיוק איך שתיכננתי שזה יראה מקצוען לגמרי תודה רבה"</p>
+      </div>
+    </div>
 
-<div class="testimonial">
-  <img src="images/almog-reco.png" alt="אלמוג דרורי ">
-  <div class="testimonial-bubble">
-    <h3>אלמוג דרורי</h3>
-    <p>"דוד אתה תותח! בדיוק מה שחיפשתי – שילוב של עיצוב חד, שירות אדיב והבנה עמוקה של מה שרציתי. לא האמנתי שהתוצאה תצא ככה... פשוט וואו. תודה אחי!"!"</p>
-  </div>
-</div>
-
+    <div class="testimonial">
+      <img src="images/almog-reco.png" alt="אלמוג דרורי ">
+      <div class="testimonial-bubble">
+        <h3>אלמוג דרורי</h3>
+        <p>"דוד אתה תותח! בדיוק מה שחיפשתי – שילוב של עיצוב חד, שירות אדיב והבנה עמוקה של מה שרציתי. לא האמנתי שהתוצאה תצא ככה... פשוט וואו. תודה אחי!"</p>
+      </div>
+    </div>
   </section>
 
   <section class="contact" id="contact">
@@ -110,60 +110,48 @@
   </footer>
 
   <script>
-// ===== גלילה חלקה לעוגנים =====
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e){
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href'))?.scrollIntoView({
-      behavior: 'smooth'
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e){
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+      });
     });
-  });
-});
 
-// ===== אפקט חשיפה בגלילה =====
-const revealElements = document.querySelectorAll('section, .work-box, .testimonial');
-const revealOnScroll = () => {
-  const triggerBottom = window.innerHeight * 0.9;
-  revealElements.forEach(el => {
-    const rect = el.getBoundingClientRect();
-    if (rect.top < triggerBottom) {
-      el.classList.add('reveal');
+    const revealElements = document.querySelectorAll('section, .work-box, .testimonial');
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.9;
+      revealElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < triggerBottom) el.classList.add('reveal');
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+
+    const h2 = document.querySelector('.hero h2');
+    if (h2) {
+      const fullText = h2.textContent;
+      h2.textContent = '';
+      let i = 0;
+      const type = () => {
+        if (i < fullText.length) {
+          h2.textContent += fullText[i++];
+          setTimeout(type, 80);
+        }
+      };
+      type();
     }
-  });
-};
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
 
-// ===== אנימציית הקלדה בכותרת =====
-const h2 = document.querySelector('.hero h2');
-if (h2) {
-  const fullText = h2.textContent;
-  h2.textContent = '';
-  let i = 0;
-  const type = () => {
-    if (i < fullText.length) {
-      h2.textContent += fullText[i++];
-      setTimeout(type, 80);
+    const wpButton = document.querySelector('.whatsapp-button');
+    if (wpButton) {
+      let hue = 0;
+      setInterval(() => {
+        hue = (hue + 1) % 360;
+        wpButton.style.boxShadow = `0 0 18px hsl(${hue}, 100%, 60%)`;
+      }, 40);
     }
-  };
-  type();
-}
 
-// ===== אנימציית RGB על כפתור וואטסאפ =====
-const wpButton = document.querySelector('.whatsapp-button');
-if (wpButton) {
-  let hue = 0;
-  setInterval(() => {
-    hue = (hue + 1) % 360;
-    wpButton.style.boxShadow = `0 0 18px hsl(${hue}, 100%, 60%)`;
-  }, 40);
-}
-
-// ===== קונסולה עם הודעת ברוך הבא משוגעת =====
-console.log("%cברוך הבא למוח של דוד וקנין!", "color: #25D366; font-size: 20px; font-weight: bold; background: #f0f0f0; padding: 8px;");
-</script>
-
-
-  
+    console.log("%cברוך הבא למוח של דוד וקנין!", "color: #25D366; font-size: 20px; font-weight: bold; background: #f0f0f0; padding: 8px;");
+  </script>
 </body>
 </html>
